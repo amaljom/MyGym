@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
@@ -30,7 +31,11 @@ public class User implements Serializable {
 
     private Boolean certification;
 
-    private Boolean activated;
+    @NotNull
+    private Boolean activated = true;
+    @NotNull
+    private Boolean activateFlag = true;
+
 
     @OneToMany(mappedBy = "user")
     List<Subscription> subscriptions;
