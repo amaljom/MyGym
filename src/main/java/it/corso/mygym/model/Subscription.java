@@ -1,5 +1,6 @@
 package it.corso.mygym.model;
 
+import it.corso.mygym.model.enums.Type;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -20,7 +21,7 @@ public class Subscription implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String type;
+    // private String type;
 
     private LocalDate startDate;
 
@@ -37,5 +38,8 @@ public class Subscription implements Serializable {
     @ManyToOne
     @JoinColumn(name= "user_id")
     User user;
+
+    @Column(name="type")
+    private Type type;
 }
 
