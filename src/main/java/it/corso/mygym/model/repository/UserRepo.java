@@ -11,5 +11,5 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     List<User> findByActivatedTrue();
 
-    List<User> findByActivatedTrueAndActiveFlagTrue();
+//    List<User> findByActivatedTrueAndActiveFlagTrue();
 }

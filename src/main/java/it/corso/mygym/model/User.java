@@ -3,6 +3,7 @@ package it.corso.mygym.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -27,8 +28,9 @@ public class User implements Serializable {
 
     private String email;
 
+    @Nullable
     private LocalDate dateOfBirth;
-
+    @Nullable
     private Boolean certification;
 
     @NotNull

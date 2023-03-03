@@ -25,7 +25,6 @@ public class UserDto {
 
     private Boolean certification;
 
-
     private Boolean activated = true;
 
     private Boolean activateFlag = true;
